@@ -1,0 +1,315 @@
+
+var :
+
+a,i, res: integer
+
+Debut
+
+Ecrire ("Entre le nombre a: ");
+
+Lire (a): //5
+
+Pour (i allant de 0 à 10) step 1 Faire 
+
+ res := a*i
+Ecrire (a,"*",i,"=",res);
+
+finpour
+
+------------------------------------------
+
+------------------------------------------
+Algorithme Etudiants
+
+var :
+
+min,max
+
+List : array_of integer [6]
+
+i, max, min : integer
+ 
+Begin
+
+List := [3,50,9,1,16,0]
+
+for i from 0 to list.lenght -1 step 1 Do
+
+Read(List[i])
+
+ENDFOR
+
+min := List[0]
+max := List[0]
+
+for i from 0 to list.lenght -1 step 1 Do
+
+if(list[i]< min) min := List [i]
+if(List[i]> max) max := List [i]
+
+ENDFOR
+
+write("le plus grand nombre est : " + max)
+write("Le plus petit nombre est : " +min)
+
+-------------------------------------------------
+-------------------------------------------------
+
+Algorithme somme
+
+var
+
+List : array_of integer [6]
+
+i, sum : integer
+
+Begin
+sum := 0
+
+List := [5,16,2,44,7,0]
+
+for i from 0 to list.lenght -1 step 1 Do 
+Lire (List(i))
+
+finpour
+
+for i from 0 to list.lenght -1 step 1 Do 
+sum = sum + List[i]
+
+finpour
+
+Ecrire("la somme est :" + sum)
+
+fin
+
+------------------------------------------------
+------------------------------------------------
+
+var 
+
+List : array_of integer [4]
+
+i,nbr : integer
+
+Begin
+
+nbr := 0
+
+List := [2,0,1,0]
+
+for i from 0 to list.lenght -1 step 1 Do
+if (list[i]=0)
+
+nbr = nbr + 1
+
+ENDFOR
+-------------------------------
+-------------------------------
+
+var
+
+str : string
+
+i, word : integer
+
+for i from 0 to str.length -1 step 1 Do
+
+if (str[i] = " ") word := word + 1
+
+ENDFOR
+
+whrite ("j'ai quelque chose a dire : " + word +1);
+
+END
+
+-------------------------------------
+-------------------------------------
+Algorithme matrix
+
+var counter:
+
+n, m : integer
+
+tab : array_of integer [n][m]
+
+Begin
+
+Read (n)
+Read (m)
+
+for 1 from 0 to n-1 step 1 Do
+   for j from 0 to m-1 step 1 Do
+
+   Read(tab[i][j])
+
+   if(tab[i][j] = 0) count := count +1
+
+   ENDFOR
+ENDFOR
+
+----------------------------------------
+----------------------------------------
+Algorithme stack_array
+
+
+List : stack
+nbr := 6 : integer
+
+pointeur := -1 : integer
+
+Begin
+
+write("entrer un element")
+Read(element)
+
+if(pointeur < nbr) Do
+
+pointeur = pointeur +1
+list.push(element)
+
+ENDIF
+
+ENDFOR
+
+last: list.peek()
+
+write("the last element" , last)
+
+if(List.isEmpty()===) Do
+last = List.pop()
+pointeur = pointeur-1
+
+ELSE
+write("vous pouvez pas supprimer le stack est vide")
+
+END
+--------------------------------------------------------
+--------------------------------------------------------
+Algorithme Queue
+
+var :
+
+List : Queue
+nbr := 6 :integer
+First := -1 , last := 1 : integer
+
+Begin
+
+if(list.isEmpty()) Do
+
+First := First +1
+Last := Last +1
+
+List.enqueue(element)
+ELSE Do
+if(Last < nbr) Do
+Last := Last +1
+List.enqueue(element)
+ELSE
+write("la list est rempli")
+ENDIF
+
+if(List.isEmpty()=== False) 
+List.dequeue()
+First := First +1
+ELSE
+write("List est vide")
+
+END
+
+var
+
+List : HASH_TABLE < integer, string>
+
+Begin
+
+write("entrer un nombre")
+Read(element)
+write("entrer un mot")
+Read(element2)
+
+List.insert(1 :"UN")
+List.insert(2 :"DEUX")
+List.insert(4 :"DEUX")
+List.insert(element : element2)
+
+item := List.get(2) // "Deux"
+
+List.delete(1)
+
+END
+--------------------------------------------------------
+--------------------------------------------------------
+
+var : 
+
+List : array_of integer [5]
+
+Begin
+
+for i from 0 to List.length -1 step 1 Do
+
+for j from i+1 to List.length -1 step 1 Do
+
+if(List[j]< List[i] ) Do
+
+tmp := List[i]
+list[i] := list[j]
+List[j] := tmp
+
+ENDIF
+ENDFOR
+
+END
+
+-----------------------------------
+-----------------------------------
+Algorithme bubble sort
+
+var : 
+List : array_of integer [5]
+i,j : integer
+
+Begin
+
+FOR j from o to list.lenght -1 Do
+
+if(List[j] > List[j+1]) Do
+
+tmp := List[i]
+List[i] := List[j]
+List[j] := tmp
+
+ENDIF
+
+ENDFOR
+ENDFOR
+
+--------------------------------------
+--------------------------------------
+Linear_serch
+
+var :
+
+List : array_of integer [5]
+numb, index : integer
+bool := false : boolean
+
+Begin
+
+Read(numb)
+
+for i from 0 to List.length -1 step 1 Do
+
+if(numb = list[i]) Do
+index := i
+bool := true
+break
+ 
+ENDIF
+
+ENDFOR
+
+if(tool === true) write("le nombre existe dans l'indice" , i) 
+ELSE write
+
